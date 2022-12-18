@@ -7,4 +7,5 @@ function mergeUserData(userData, additionalUserData) {
         return Object.assign({}, item, additionalItem);
     })
 }
+
 userData = mergeUserData(personData, additionalPersonData);

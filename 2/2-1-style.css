@@ -8,6 +8,9 @@
     --my-gray: #c5c5c5;
     --my-dark-gray: #333333;
 }
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .w3-sidebar {
     z-index: 3;
     width: 300px;
@@ -34,9 +37,9 @@
     color: white;
     padding: 0px 20px;
 }
-
 .bars:hover {
     background-color: white;
+    cursor: pointer;
 }
 .bars:hover .fa-bars{
     color: black;
@@ -90,43 +93,9 @@
 .bars {
     width: 50px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-/* .navigation {
-    background-color: black;
-    width: calc(100% - 100px);
-    display: flex;
-    flex-direction: column;
-}
-.nav-change {
-    width: 100%;
-    display: none;
-}
-.nav-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-}
-.bars {
-    height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-} */
-
 .nav:hover {
-    background-color: white;
+    background-color: var(--my-gray);
     color: black;
 }
 .nav.logo:hover {
@@ -138,7 +107,7 @@
     column-gap: 14px;
 }
 .nav.search:hover {
-    background-color: var(--green);
+    background-color: var(--my-gray);
 }
 
 .dropbtn {
@@ -179,7 +148,7 @@
 
 .image-boat {
     width: 100%;
-    height: 350px;
+    height: 390px;
 }
 .image-container {
     position: relative;
@@ -238,11 +207,9 @@
 .person img:hover {
     opacity: 0.5;
 }
-.person p {
+.person p.bigfont {
     margin-top: 15px;
 }
-
-
 .img-card-container {
     padding: 50px 16px;
     min-height: 545px;
@@ -328,14 +295,14 @@
     flex-wrap: wrap;
     row-gap: 16px;
     padding: 20px 16px;
-    height: 550px;
+    min-height: 550px;
 }
 .card {
     height: 550px;
     border: 1px solid rgb(187, 187, 187);
 }
 .card:hover {
-    box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.2);
+    box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.3);
 }
 .data.type {
     height: 100px;
@@ -404,7 +371,153 @@ p.money {
     color: black;
     background-color: #c5c5c5;
 }
-
+.end {
+    background-color: black;
+    height: 55px;
+}
+.contact {
+    margin-top: 40px;
+    padding: 64px 16px 64px 16px;
+    background-color: #f0f0f0;
+    min-height: 322px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cinfo {
+    height: 312px;
+}
+.cinfo span {
+    margin: 10px 0;
+    font-size: 24px;
+    border-bottom: 6px solid var(--green);
+}
+.cinfo h4 {
+    font-size: 24px;
+    margin: 28px 0px 15px;
+}
+.cinfo i {
+    color: var(--green);
+    font-size: 24px;
+}
+.cinfo p {
+    margin: 12px 0px;
+}
+div.address {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+.form-card {
+    height: 320px;
+    padding: 16px;
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.3);
+    background-color: white;
+}
+.inp {
+    margin: 16px 0px;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+.send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.send-btn {
+    width: 72px;
+    height: 38px;
+    background-color: black;
+    color: white;
+}
+.send-btn:hover {
+    background-color: var(--my-gray);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+.map {
+    width: 100%;
+    height: auto;
+    filter: grayscale(50%);
+}
+.follow {
+    background-color: black;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+    position: relative;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+}
+.follow .title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.icon {
+    padding: 15px 18px 13px;
+    background-color: var(--green);
+}
+.icon i {
+    font-size: 19px;
+}
+.icons {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 7px;
+}
+.icon:hover {
+    background-color: var(--my-gray);
+    cursor: pointer;
+}
+.icon:hover .social {
+    color: black;
+}
+.fa-chevron-circle-up {
+    font-size: 23px;
+}
+.w3-tooltip {
+    position: absolute;
+    right: 18px;
+    top: 70px;
+}
+.w3-tag {
+    background-color: var(--green);
+    font-size: 16px;
+    padding: 5px 16px;
+}
+.top {
+    padding: 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.top:hover {
+    background-color: var(--my-gray);
+}
+.top:hover .fa-chevron-circle-up {
+    color: black;
+}
+.follow a:link,
+.follow a:visited,
+.follow a:hover,
+.follow a:active {
+    color: white;
+}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -439,15 +552,16 @@ p.money {
     .d-l-none {display: none;}
     .d-l-block {display: block;}
 
-    .nav-container {
-        display: flex;
-        flex-direction: row;
-    }
     .nav-change {
         width: calc(100% - 100px);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    .nav-container {
+        width: calc(100% - 100px);
+        display: flex;
+        flex-direction: row;
     }
     .navigation {
         width: 100px;
@@ -467,6 +581,13 @@ p.money {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+    }
+    .nav:hover {
+        background-color: white;
+        color: black;
+    }
+    .nav.search:hover {
+        background-color: var(--green);
     }
     .image-boat {
         width: 100%;

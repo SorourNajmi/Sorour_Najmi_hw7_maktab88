@@ -23,20 +23,22 @@ function create(dataObj) {
         console.info("Successfully created!");
     }
 }
-create({
-    uid: 7,
-    firstName: 'Karim',
-    lastName: 'Khani',
-    position: 'CEO',
-    city: 'Mashhad',
-});
-create({
-    uid: 4,
-    firstName: 'Mohammad',
-    lastName: 'Fakhrayi',
-    position: 'QA Engineer',
-    city: 'Isfahan',
-});
+
+// create({
+//     uid: 7,
+//     firstName: 'Karim',
+//     lastName: 'Khani',
+//     position: 'CEO',
+//     city: 'Mashhad',
+// });
+
+// create({
+//     uid: 4,
+//     firstName: 'Mohammad',
+//     lastName: 'Fakhrayi',
+//     position: 'QA Engineer',
+//     city: 'Isfahan',
+// });
 
 function update(dataObj) {
     if (typeof dataObj !== 'object') {
@@ -55,8 +57,10 @@ function update(dataObj) {
     }
     console.info("Successfully updated!");
 }
-update({uid:7, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
-update({uid:9, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
+
+// update({uid:7, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
+
+// update({uid:9, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
 
 function remove(id) {
     if (isNaN(id)) {
@@ -74,5 +78,7 @@ function remove(id) {
     userData.splice(index, 1);
     console.info("Successfully removed!");
 }
-remove(2);
-remove(12);
+
+// remove(2);
+
+// remove(12);
