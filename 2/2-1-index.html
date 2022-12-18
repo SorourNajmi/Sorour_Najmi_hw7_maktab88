@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2-1</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/af2e9f0a0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="2-1-style.css">
+</head>
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+        <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large"><span>Close  </span><i class="fa fa-times" aria-hidden="true"></i></button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button">Link 4</a>
+        <a href="#" class="w3-bar-item w3-button">Link 5</a>
+    </div>
+    <div class="navbar col-12">
+        <div class="navigation">
+            <div class="nav logo">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <p>Logo</p>
+            </div>
+            <div class="bars d-l-none d-block" onclick="openNav()">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="nav-change d-none d-l-block" id="nav-change">
+            <div class="nav-container">
+                <div class="nav"><p>Team</p></div>
+                <div class="nav"><p>Work</p></div>
+                <div class="nav"><p>Price</p></div>
+                <div class="nav"><p>contact</p></div>
+                <div class="dropdown d-none d-l-block">
+                    <button class="dropbtn nav">
+                        <p>Dropdown</p>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav search">
+                <p class="search d-block d-l-none">Search</p>
+                <i class="d-l-block d-none fa fa-search" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        <img class="image-boat" src="sailboat.jpg" alt="sail boat" />
+        <div class="w3-container">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">
+                LEARN W3.CSS</button>
+            <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-teal"> 
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h4>Oh snap! We just showed you a modal..</h4>
+                <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+                </header>
+                <div class="para w3-container">
+                    <p>Cool huh? Ok, enough teasing around..</p>
+                    <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+                </div>
+                <footer class="para w3-container w3-teal">
+                <p>Modal Footer</p>
+                </footer>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="people col-12">
+        <p class="titlefont">OUR TEAM</p>
+        <p class="team">Meet the team - our office rats:</p>
+        <div class="person-container col-12">
+            <div class="person col-12 col-l-3">
+                <img src="avatar.jpg" alt="oldman">
+                <p class="bigfont">Johnny Walker</p>
+                <p>Web Designer</p>
+            </div>
+            <div class="person col-12 col-l-3">
+                <img src="avatar.jpg" alt="oldman">
+                <p class="bigfont">Rebecca Flex</p>
+                <p>Support</p>
+            </div>
+            <div class="person col-12 col-l-3">
+                <img src="avatar.jpg" alt="oldman">
+                <p class="bigfont">Jan Ringo</p>
+                <p>Boss man</p>
+            </div>
+            <div class="person col-12 col-l-3">
+                <img src="avatar.jpg" alt="oldman">
+                <p class="bigfont">Kai Ringo</p>
+                <p>Fixer</p>
+            </div>
+        </div>
+    </div>
+    <div class="img-card-container col-12">
+        <div class="pr-card col-12 col-l-3">
+            <div class="img-card text">
+                <p class="titlefont">Our Work</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ratione praesentium consequuntur delectus consectetur fugit nulla aliquid iure officiis sed. Alias distinctio esse at sapiente, illo assumenda iusto ab earum.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, quidem inventore. A sed suscipit quod sapiente temporibus perferendis modi repellendus obcaecati quo velit consectetur beatae exercitationem, quidem magni odit expedita!
+                </p>
+            </div>
+        </div>
+        <div class="pl-card pr-card col-12 col-l-3">
+            <div class="img-card photo">
+                <img src="snow.jpg" alt="">
+                <div class="img-text">
+                    <p class="bigfont">Customer 1</p>
+                    <p class="mediumfont">Trade</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                </div>
+            </div>
+        </div>
+        <div class="pl-card pr-card col-12 col-l-3">
+            <div class="img-card photo">
+                <img src="lights.jpg" alt="">
+                <div class="img-text">
+                    <p class="bigfont">Customer 2</p>
+                    <p class="mediumfont">Trade</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                </div>
+            </div>
+        </div>
+        <div class="pl-card col-12 col-l-3">
+            <div class="img-card photo">
+                <img src="mountains.jpg" alt="">
+                <div class="img-text">
+                    <p class="bigfont">Customer 3</p>
+                    <p class="mediumfont">Trade</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                    <p>Blablabla</p>
+                </div>
+            </div>
+        </div>
+        <div class="plus-container">
+            <button class="plus" class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <div class="info-container col-12">
+        <p class="titlefont">PRICING</p>
+        <p>Choose a pricing plan that fits your needs.</p>
+        <div class="card-container col-12">
+            <div class="pr-card col-12 col-l-4">
+                <div class="card">
+                    <div class="data type"><p>Basic</p></div>
+                    <div class="data us"><p><span><b>10GB </b></span><span>Storage</span></p></div>
+                    <div class="data us"><p><span><b>10 </b></span><span>Emails</span></p></div>
+                    <div class="data us"><p><span><b>10 </b></span><span>Domains</span></p></div>
+                    <div class="data us"><p><span><b>Endless </b></span><span>Support</span></p></div>
+                    <div class="data money">
+                        <p class="money"><i class="fa fa-usd" aria-hidden="true"></i><span class="bignumber">10</span></p>
+                        <p class="light">per month</p>
+                    </div>
+                    <div class="data signup">
+                        <div class="mbc">
+                            <button class="moneybtn">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Sign Up</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-card pr-card col-12 col-l-4">
+                <div class="card">
+                    <div class="data type pro"><p>Pro</p></div>
+                    <div class="data us"><p><span><b>25GB </b></span><span>Storage</span></p></div>
+                    <div class="data us"><p><span><b>25 </b></span><span>Emails</span></p></div>
+                    <div class="data us"><p><span><b>25 </b></span><span>Domains</span></p></div>
+                    <div class="data us"><p><span><b>Endless </b></span><span>Support</span></p></div>
+                    <div class="data money">
+                        <p class="money"><i class="fa fa-usd" aria-hidden="true"></i><span class="bignumber">25</span></p>
+                        <p class="light">per month</p>
+                    </div>
+                    <div class="data signup">
+                        <div class="mbc">
+                            <button class="moneybtn">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Sign Up</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-card col-12 col-l-4">
+                <div class="card">
+                    <div class="data type"><p>Premium</p></div>
+                    <div class="data us"><p><span><b>50GB </b></span><span>Storage</span></p></div>
+                    <div class="data us"><p><span><b>50 </b></span><span>Emails</span></p></div>
+                    <div class="data us"><p><span><b>50 </b></span><span>Domains</span></p></div>
+                    <div class="data us"><p><span><b>Endless </b></span><span>Support</span></p></div>
+                    <div  class="data money">
+                        <p class="money"><i class="fa fa-usd" aria-hidden="true"></i><span class="bignumber">50</span></p>
+                        <p class="light">per month</p>
+                    </div>
+                    <div class="data signup">
+                        <div class="mbc">
+                            <button class="moneybtn">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <span>Sign Up</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contact">
+            <div class="cinfo">
+                <span>Contact Us</span>
+                <h4>Address</h4>
+                <p>Swing by for a cup of coffee, or whatever.</p>
+                <div class="address">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p> Chicago, US</p>
+                </div>
+                <div class="address">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p> +00 1515151515</p>
+                </div>
+                <div class="address">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <p> test@test.com</p>
+                </div>
+            </div>
+            <div class="form-card">
+                <label>Name</label>
+                <input type="text" name="name">
+                <label>Email</label>
+                <input type="email" name="email">
+                <label>Message</label>
+                <input type="text" name="message">
+                <div class="send">
+                    <div class="like">
+                        <input type="checkbox" name="like">
+                        <label I Like it!></label>
+                    </div>
+                    <button type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <img src="map.jpg" alt="map">
+        </div>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icons">
+                <div class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                <div class="icon"><i class="fa fa-twitter" aria-hidden="true"></i> </div>
+                <div class="icon"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+                <div class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                <div class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+            <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+        </div>
+    </footer>
+
+    <script>
+        function openLeftMenu() {
+            document.getElementById("leftMenu").style.display = "block";
+        }
+        function closeLeftMenu() {
+            document.getElementById("leftMenu").style.display = "none";
+        }
+        function openNav() {
+            let element = document.getElementById("nav-change");
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
