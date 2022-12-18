@@ -533,6 +533,7 @@ input {
 .col-12 {width: 100%;}
 .d-none {display: none;}
 .d-block {display: block;}
+.d-flex {display: flex;}
 
 @media only screen and (min-width: 600px) {
     .col-l-1 {width: 8.33%;}
@@ -551,6 +552,7 @@ input {
     .pl-card {padding-left: 8px;}
     .d-l-none {display: none;}
     .d-l-block {display: block;}
+    .d-l-flex {display: flex !important;}
 
     .nav-change {
         width: calc(100% - 100px);
