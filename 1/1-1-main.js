@@ -7,7 +7,6 @@ function mergeUserData(userData, additionalUserData) {
         additionalItem = additionalUserData.find(function(element) {
             return element.uid === item.uid;
         })
-        delete additionalItem.uid;
         return Object.assign({}, item, additionalItem);
     })
 }
