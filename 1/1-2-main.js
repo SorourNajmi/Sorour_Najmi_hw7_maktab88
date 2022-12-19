@@ -18,18 +18,31 @@ function create(dataObj) {
     if (isSimilar) {
         console.error("Duplicate uid! Cannot create!");
         return;
-    } else {
-        userData.push(dataObj);
-        console.info("Successfully created!");
     }
+    let flag = false;
+    // با ایجاد فلگ اجازه می دهیم تمام خصوصیاتی که وجود ندارند به اطلاع کاربر برسد سپس از فانکشن خارج شود
+    for (const key of Object.keys(userData[0])) {
+        if (!Object.keys(dataObj).includes(key)) {
+            console.log(`Property(${key}) is missing!`);
+            flag = true;
+        }
+    }
+    if (flag) return;
+    userData.push(dataObj);
+    console.info("Successfully created!");
 }
-
 // create({
 //     uid: 7,
 //     firstName: 'Karim',
 //     lastName: 'Khani',
 //     position: 'CEO',
 //     city: 'Mashhad',
+// });
+
+// create({
+//     uid: 8,
+//     firstName: 'Karim',
+//     lastName: 'Khani',
 // });
 
 // create({
@@ -57,7 +70,6 @@ function update(dataObj) {
     }
     console.info("Successfully updated!");
 }
-
 // update({uid:7, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
 
 // update({uid:9, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
@@ -78,7 +90,6 @@ function remove(id) {
     userData.splice(index, 1);
     console.info("Successfully removed!");
 }
-
 // remove(2);
 
 // remove(12);

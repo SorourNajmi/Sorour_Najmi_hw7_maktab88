@@ -7,6 +7,7 @@
     --green: #009688;
     --my-gray: #c5c5c5;
     --my-dark-gray: #333333;
+    --my-light-gray: #f0f0f0;
 }
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -299,7 +300,7 @@ body {
 }
 .card {
     height: 550px;
-    border: 1px solid rgb(187, 187, 187);
+    border: 1px solid #dddddd;
 }
 .card:hover {
     box-shadow: 5px 6px 15px 0px rgba(0,0,0,0.3);
@@ -309,18 +310,18 @@ body {
     background-color: black;
 }
 .data.type.pro {
-    background-color: #5c5c5c;
+    background-color: #666666;
 }
 .data {
     height: 60px;
-    border: 1px solid rgb(187, 187, 187);
+    border: 1px solid #dddddd;
     border-right: 0px;
     border-left: 0px;
     border-top: 0px;
 }
 .data.signup {
     height: 90px;
-    background-color: #f0f0f0;
+    background-color: var(--my-light-gray);
 }
 .data.money {
     height: 120px;
@@ -378,7 +379,7 @@ p.money {
 .contact {
     margin-top: 40px;
     padding: 64px 16px 64px 16px;
-    background-color: #f0f0f0;
+    background-color: var(--my-light-gray);
     min-height: 322px;
     display: flex;
     flex-direction: row;
