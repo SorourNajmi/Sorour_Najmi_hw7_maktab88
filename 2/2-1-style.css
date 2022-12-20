@@ -58,8 +58,6 @@ body {
     column-gap: 8px;
     align-items: center;
 }
-
-
 .nav-container {
     display: flex;
     flex-direction: column;

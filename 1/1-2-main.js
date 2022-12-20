@@ -19,15 +19,15 @@ function create(dataObj) {
         console.error("Duplicate uid! Cannot create!");
         return;
     }
-    let flag = false;
+    let incompleteItemFlag = false;
     // با ایجاد فلگ اجازه می دهیم تمام خصوصیاتی که وجود ندارند به اطلاع کاربر برسد سپس از فانکشن خارج شود
     for (const key of Object.keys(userData[0])) {
         if (!Object.keys(dataObj).includes(key)) {
             console.log(`Property(${key}) is missing!`);
-            flag = true;
+            incompleteItemFlag = true;
         }
     }
-    if (flag) return;
+    if (incompleteItemFlag) return;
     userData.push(dataObj);
     console.info("Successfully created!");
 }
@@ -58,19 +58,21 @@ function update(dataObj) {
         console.error("Not an object!");
         return;
     }
-    let newItem = userData.find(function(item) {
+    let updateItem = userData.find(function(item) {
         return item.uid === dataObj.uid;
     });
-    if (newItem === undefined) {
+    if (updateItem === undefined) {
         console.error("Not existing! Cannot update!");
         return;
-    }
+    } 
     for (const key in dataObj) {
-        newItem[key] = dataObj[key];
+        if (Object.keys(userData[0]).includes(key)) {
+            updateItem[key] = dataObj[key];
+        }
     }
     console.info("Successfully updated!");
 }
-// update({uid:7, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
+// update({uid:3, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
 
 // update({uid:9, firstName:'Karim', lastName:'Khanipour',position:'CEO', city:'Mashhad', age:37});
 
