@@ -58,16 +58,16 @@ function update(dataObj) {
         console.error("Not an object!");
         return;
     }
-    let updateItem = userData.find(function(item) {
+    let updatingItem = userData.find(function(item) {
         return item.uid === dataObj.uid;
     });
-    if (updateItem === undefined) {
+    if (!updatingItem) {
         console.error("Not existing! Cannot update!");
         return;
     } 
     for (const key in dataObj) {
         if (Object.keys(userData[0]).includes(key)) {
-            updateItem[key] = dataObj[key];
+            updatingItem[key] = dataObj[key];
         }
     }
     console.info("Successfully updated!");
